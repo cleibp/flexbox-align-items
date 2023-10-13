@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox | align-items</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container" id="container">
+        <div class="item big">1</div>
+        <div class="item">2</div>
+        <div class="item small">3</div>
+        <div class="item big">4</div>
+        <div class="item">5</div>
+        <div class="line" id="line"></div>
+      </div>
+      <div class="controls">
+        <input type="radio" name="align-items" id="flex-start" 
+               onclick="
+                        var container=document.getElementById('container'); 
+                        container.style.WebkitAlignItems = 'flex-start';
+                        container.style.alignItems = 'flex-start'; 
+                        var line = document.getElementById('line'); 
+                        line.style.visibility = 'hidden';  
+                        ">
+        <label for="flex-start">align-items: flex-start;</label>
+        <br>
+        <input type="radio" name="align-items" id="flex-end" 
+               onclick="
+                        var container=document.getElementById('container'); 
+                        container.style.WebkitAlignItems = 'flex-end'; 
+                        container.style.alignItems = 'flex-end'; 
+                        var line = document.getElementById('line'); 
+                        line.style.visibility = 'hidden';  
+                        ">
+        <label for="flex-end">align-items: flex-end;</label>
+        <br>
+        <input type="radio" name="align-items" id="center" 
+               onclick="
+                        var container=document.getElementById('container'); 
+                        container.style.WebkitAlignItems = 'center'; 
+                        container.style.alignItems = 'center'; 
+                        var line = document.getElementById('line'); 
+                        line.style.visibility = 'hidden';  
+                        ">
+        <label for="center">align-items: center;</label>
+        <br>
+        <input type="radio" name="align-items" id="baseline" 
+               onclick="
+                        var container=document.getElementById('container'); 
+                        container.style.WebkitAlignItems = 'baseline'; 
+                        container.style.alignItems = 'baseline'; 
+                        var line = document.getElementById('line'); 
+                        line.style.visibility = 'visible'; 
+                        ">
+        <label for="baseline">align-items: baseline;</label>
+        <br>
+        <input type="radio" name="align-items" id="stretch" 
+               onclick="
+                        var container=document.getElementById('container');
+                        container.style.WebkitAlignItems = 'stretch';  
+                        container.style.alignItems = 'stretch'; 
+                        var line = document.getElementById('line'); 
+                        line.style.visibility = 'hidden'; 
+                        " checked>
+        <label for="stretch">align-items: stretch;</label>
+      </div>
+</body>
+</html>
